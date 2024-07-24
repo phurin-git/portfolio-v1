@@ -1,5 +1,4 @@
-export default function Project(props) {
-    //projectName, workSummary
+export default function Project(props:any) {
     return (
         <div className="py-2.5 grid grid-cols-3">
             <div></div>

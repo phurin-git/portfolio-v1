@@ -1,12 +1,11 @@
-import LeftSection from "./LeftSection";
-import RightSection from "./RightSection"
+import LeftSection from "./components/LeftSection";
+import RightSection from "./components/RightSection"
+
 export default function Home() {
   return (
-    <div className="">
-      <div className="md:container md:mx-auto h-screen flex justify-center gap-4">
-        <LeftSection />
-        <RightSection />
-      </div>
+    <div className="mx-auto max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:grid lg:grid-cols-2 lg:px-24 lg:py-0">
+      <LeftSection />
+      <RightSection />
     </div>
   );
 }

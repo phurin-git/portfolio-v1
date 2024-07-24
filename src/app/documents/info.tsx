@@ -1,4 +1,15 @@
-const card = {
+interface Card {
+    myName: string,
+    jobTitle: string,
+    myEmail: string,
+    myGithub: string,
+    myLinkedin: string,
+    myFacebook: string,
+    myInstagram: string,
+    myBio: string
+}
+
+const card:Card = {
     myName: "Phurin Nararat",
     jobTitle: "Automation Engineer | Aspiring Full Stack Engineer",
     myEmail: "mailto:phurin.nrt@gmail.com",
@@ -6,13 +17,21 @@ const card = {
     myLinkedin: "https://www.linkedin.com/in/phurinnararat",
     myFacebook: "https://www.fb.com/phurinnararat",
     myInstagram: "https://www.instagram.com/phurin.ig",
-    myBio: "Enthusiastic Automation Engineer who passionate for coding and programing, transitioning to Full Stack Engineering"
+    myBio: "Enthusiastic Automation Engineer who passionate for coding and programing transitioning to Full Stack Engineering"
 }
 
-const about = "Enthusiastic Automation Engineer transitioning to Full Stack Engineering, with a proven track record in programming and integrating complex systems. Skilled in system testing, validation, and performance optimization. Committed to lifelong learning and passionate about coding. Adept at leveraging programming knowledge to solve complex problems and drive innovation. Excited to bring a self-reliant and continuously learning mindset to Full Stack development, utilizing expertise in various programming languages and tools to build robust and efficient applications."
+const about:string = "Enthusiastic Automation Engineer transitioning to Full Stack Engineering, with a proven track record in programming and integrating complex systems. Skilled in system testing, validation, and performance optimization. Committed to lifelong learning and passionate about coding. Adept at leveraging programming knowledge to solve complex problems and drive innovation. Excited to bring a self-reliant and continuously learning mindset to Full Stack development, utilizing expertise in various programming languages and tools to build robust and efficient applications."
 
 class Experience{
-    constructor(title, companyName, fromDate, toDate, location, website, responsibility, sumResponsibility){
+    title: string
+    companyName: string
+    fromDate: string
+    toDate: string
+    location: string
+    website: string
+    responsibility: string[]
+    sumResponsibility: string
+    constructor(title: string, companyName: string, fromDate: string, toDate: string, location: string, website: string, responsibility: string[], sumResponsibility: string){
         this.title = title
         this.companyName = companyName
         this.fromDate = fromDate
@@ -24,13 +43,13 @@ class Experience{
     }
 }
 
-const MELFT = new Experience(
+const MELFT:Experience = new Experience(
     "Internship",
     "MELFT",
     "08/2022",
     "11/2022",
     "Phra Khanong, Bangkok, Thailand",
-    "www.mitsubishifa.co.th",
+    "https://www.mitsubishifa.co.th",
     [
         "Learn and use ICONICS GENESIS64 SCADA software, sharing techniques with team members.",
         "Provide user manuals for ICONICS GENESIS64 to customers.",
@@ -39,13 +58,13 @@ const MELFT = new Experience(
     "Learned and used ICONICS GENESIS64 SCADA software, sharing techniques and providing user manuals to customers and team members. Also designed SCADA prototype for company's decarbonization project."
 )
 
-const SST = new Experience(
+const SST:Experience = new Experience(
     "Automation Engineer",
     "SST",
     "06/2023",
     "07/2024",
     "Bang Chalong, Samut Prakan, Thailand",
-    "www.somboonsiasuntech.co.th",
+    "https://www.somboonsiasuntech.co.th",
     [
         "Install and wire ASRS electrical components (cabinet, cables, sensors).",
         "Program PLC and HMI for system control.",
@@ -58,25 +77,35 @@ const SST = new Experience(
     "Installed and wired ASRS electrical components, programmed PLC and HMI for control, and integrated ASRS with WMS, WCS, and ERP systems. Conducted hardware and software testing to validate performance, trained customers on operation and maintenance, and managed the go-live process while monitoring initial performance"
 )
 
-const experience = [MELFT, SST]
+const experience:Experience[] = [MELFT, SST]
 
 class Education{
-    constructor(degree, university, GPA, location, fromDate, toDate, extraDetail){
+    degree: string
+    university: string
+    GPA: string
+    location: string
+    website:string
+    fromDate: string
+    toDate: string
+    extraDetail: string[]
+    constructor(degree: string, university: string, GPA: string, location: string, website:string, fromDate: string, toDate: string, extraDetail: string[]){
         this.degree = degree
         this.university = university
         this.GPA = GPA
         this.location = location
+        this.website = website
         this.fromDate = fromDate
         this.toDate = toDate
         this.extraDetail = extraDetail
     }
 }
 
-const KU = new Education(
+const KU:Education = new Education(
     "B.Eng. in Robotic and Automation Systems Engineering",
     "Kasetsart University",
     "3.65",
     "Sriracha, Chonburi, Thailand",
+    "https://www.ku.ac.th/",
     "07/2019",
     "04/2023",
     [
@@ -84,20 +113,25 @@ const KU = new Education(
     ]
 )
 
-const TU = new Education(
+const TU:Education = new Education(
     "M.Eng. in Artificial Intelligence and Internet of Things",
     "Thammasat University",
     "",
-    "TUXSA, www.skillane.com",
+    "TUXSA, skillane",
+    "https://www.skilllane.com/academic/thammasat-university",
     "08/2024",
-    "Ongoing",
+    "Present",
     []
 )
 
-const education = [KU, TU]
+const education:Education[] = [KU, TU]
 
 class Project{
-    constructor(projectName, fromDate, toDate, workSummary){
+    projectName: string
+    fromDate: string
+    toDate: string
+    workSummary: string
+    constructor(projectName: string, fromDate: string, toDate: string, workSummary: string){
         this.projectName = projectName,
         this.fromDate = fromDate,
         this.toDate = toDate,
@@ -106,7 +140,7 @@ class Project{
 }
 
 
-const projects = [
+const projects:Project[] = [
     new Project(
         "Object Inspection by using Python OpenCV",
         "12/2021",

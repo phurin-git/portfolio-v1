@@ -34,3 +34,30 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Color Palette
+## Night Theme
+**Theme 1**
+- #191825 rgb(25, 24, 37)
+- #865DFF rgb(134, 93, 255)
+- #E384FF rgb(227, 132, 255)
+- #FFA3FD rgb(255, 163, 253)
+
+**Theme 2**
+- #000000 rgb(0, 0, 0)
+- #52057B rgb(82, 5, 123)
+- #892CDC rgb(137, 44, 220)
+- #BC6FF1 rgb(188, 111, 241)
+
+**Theme 3**
+- #000272 rgb(0, 2, 114)
+- #341677 rgb(52, 22, 119)
+- #A32F80 rgb(163, 47, 128)
+- #FF6363 rgb(255, 99, 99)
+
+## Light
+**Theme 1**
+- #FCECDD rgb(252, 236, 221)
+- #FFC288 rgb(255, 194, 136)
+- #FEA82F rgb(254, 168, 47)
+- #FF6701 rgb(255, 103, 1)

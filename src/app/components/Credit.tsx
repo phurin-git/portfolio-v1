@@ -1,0 +1,5 @@
+export default function Credit() {
+    return(
+        <p className="text-sm">Inspiration from <a className="font-bold hover:text-focus transition-all motion-reduce:transition-none" href="https://brittanychiang.com" target="_blank" rel="noopener noreferrer">Brittany Chiang</a> and coded in <a className="font-bold hover:text-focus transition-all motion-reduce:transition-none" href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>. Built with <a className="font-bold hover:text-focus transition-all motion-reduce:transition-none" href="https://nextjs.org" target="_blank" rel="noopener noreferrer">Next.js</a> and <a className="font-bold hover:text-focus transition-all motion-reduce:transition-none" href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>, deployed with <a className="font-bold hover:text-focus transition-all motion-reduce:transition-none" href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a>.</p>
+    )
+}
