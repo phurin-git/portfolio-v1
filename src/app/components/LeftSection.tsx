@@ -13,26 +13,26 @@ export default function LeftSection() {
               <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
             </svg>
           </a>
-          <div className="hidden w-1/3 lg:text-xs lg:font-bold lg:flex lg:flex-col lg:my-10">
+          <div className="hidden w-1/3 lg:text-sm lg:font-bold lg:uppercase lg:tracking-widest lg:flex lg:flex-col lg:my-10">
             <a className="group py-3" href="#About">
-              <span className="inline-block align-middle mr-4 h-px w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
+              <span className="inline-block align-middle mr-4 h-0.5 w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
               <span className="group-hover:text-focus group-focus-visible:bg-focus group-motion-reduce:transition-none">About</span>
             </a>
             <a className="group py-3" href="#Education">
-              <span className="inline-block align-middle mr-4 h-px w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
+              <span className="inline-block align-middle mr-4 h-0.5 w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
               <span className="group-hover:text-focus group-focus-visible:bg-focus group-motion-reduce:transition-none">Education</span>
             </a>
             <a className="group py-3" href="#Experience">
-              <span className="inline-block align-middle mr-4 h-px w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
+              <span className="inline-block align-middle mr-4 h-0.5 w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
               <span className="group-hover:text-focus group-focus-visible:bg-focus group-motion-reduce:transition-none">Experience</span>
             </a>
             <a className="group py-3" href="#Projects">
-              <span className="inline-block align-middle mr-4 h-px w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
+              <span className="inline-block align-middle mr-4 h-0.5 w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
               <span className="group-hover:text-focus group-focus-visible:bg-focus group-motion-reduce:transition-none">Projects</span>
             </a>
           </div>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row mt-10 lg:mt-0">
           <a className="mr-5 transition-all hover:text-focus motion-reduce:transition-none" href={card.myEmail}>
             <svg className="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
               <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
