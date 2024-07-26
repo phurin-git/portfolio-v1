@@ -1,6 +1,6 @@
 export default function Project(props:any) {
     return (
-        <a className="py-2.5 grid grid-cols-3 group hover:text-focus" href={props.item.link} target="_blank" rel="noopener noreferrer">
+        <a className="py-2.5 grid grid-cols-3 group hover:text-highlight" href={props.item.link} target="_blank" rel="noopener noreferrer">
             <div className="m-4 mt-1">
                 <img className="size-auto rounded outline-4 outline-none group-hover:outline group-hover:outline-current outline-offset-0" src={props.item.previewImage} alt="" />
             </div>

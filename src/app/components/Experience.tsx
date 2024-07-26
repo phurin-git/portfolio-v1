@@ -1,6 +1,6 @@
 export default function Experience(props:any) {
     return (
-        <a className="py-2.5 grid grid-cols-3 group hover:text-focus" href={props.item.website} target="_blank" rel="noopener noreferrer">
+        <a className="py-2.5 grid grid-cols-3 group hover:text-hightlight" href={props.item.website} target="_blank" rel="noopener noreferrer">
             <p className="font-medium transition-all motion-reduce:transition-none">{props.item.fromDate + " - " + props.item.toDate}</p>
             <div className="grid-cols-subgrid col-span-2 flex-col">
                 <div className="leading-normal font-medium flex flex-row content-center items-center">
