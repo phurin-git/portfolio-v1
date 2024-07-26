@@ -1,7 +1,7 @@
 export default function Project(props:any) {
     return (
-        <a className="py-2.5 grid grid-cols-3 group hover:text-highlight" href={props.item.link} target="_blank" rel="noopener noreferrer">
-            <div className="m-4 mt-1">
+        <a className="transition ease-in-out duration-300 hover:drop-shadow-xl hover:bg-gray-400 hover:rounded-md hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-opacity-10 pr-8 pl-3 py-5 grid grid-cols-3 group hover:text-highlight" href={props.item.link} target="_blank" rel="noopener noreferrer">
+            <div className="brightness-75 group-hover:brightness-100 m-4 mt-1">
                 <img className="size-auto rounded outline-4 outline-none group-hover:outline group-hover:outline-current outline-offset-0" src={props.item.previewImage} alt="" />
             </div>
             <div className="leading-normal font-medium grid-cols-subgrid col-span-2 flex flex-col">
@@ -16,3 +16,5 @@ export default function Project(props:any) {
         </a>
     )
 }
+
+//h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100
