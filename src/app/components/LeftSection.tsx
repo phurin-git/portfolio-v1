@@ -53,7 +53,7 @@ export default function LeftSection() {
   }, [isAbout, isEducation, isExperience, isProjects])
 
     return (
-      <div className="mb-10 lg:min-h-screen lg:sticky lg:top-0 lg:flex lg:flex-col lg:justify-between lg:max-h-screen  lg:py-24 lg:mb-0">
+      <div className="z-40 mb-10 lg:min-h-screen lg:sticky lg:top-0 lg:flex lg:flex-col lg:justify-between lg:max-h-screen  lg:py-24 lg:mb-0">
         <div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{card.myName}</h1>
           <h2 className="mt-3 text-lg font-medium tracking-tight sm:text-xl">{card.jobTitle}</h2>

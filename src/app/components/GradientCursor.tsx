@@ -42,6 +42,6 @@ export default function Cursor(){
     }, [scrollY])
 
     return(
-        <div id="cursor" className="absolute size-96 rounded-full bg-white mix-blend-overlay opacity-15 blur-3xl" />
+        <div id="cursor" className="z-0 invisible absolute size-96 rounded-full bg-white mix-blend-overlay opacity-15 blur-3xl lg:visible" />
     )
 }
