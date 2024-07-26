@@ -7,32 +7,51 @@ export default function LeftSection() {
   const [isEducation, setIsEducation] = useState(false)
   const [isExperience, setIsExperience] = useState(false)
   const [isProjects, setIsProjects] = useState(false)
-  const getAboutRect = () => document.getElementById("About") ?.getBoundingClientRect()
+  
+  const getAboutRect = () => document.getElementById("About")?.getBoundingClientRect()
   const getEducationRect = () => document.getElementById("Education")?.getBoundingClientRect()
   const getExperinceRect = () => document.getElementById("Experience")?.getBoundingClientRect()
   const getProjectsRect = () => document.getElementById("Projects")?.getBoundingClientRect()
+  const getAboutHeight = () => Number(getAboutRect()?.top) + Number(getAboutRect()?.height)
+  const getEducationHeight = () => Number(getEducationRect()?.top) + Number(getEducationRect()?.height)
+  const getExperienceHeight = () => Number(getExperinceRect()?.top) + Number(getExperinceRect()?.height)
+  const getProjectsHeight = () => Number(getProjectsRect()?.top) + Number(getProjectsRect()?.height)
   
-  const handleScroll = () => {
-    setIsAbout((Number(getAboutRect()?.top) + Number(getAboutRect()?.height)) > 10)
-    setIsEducation(!isAbout && ((Number(getEducationRect()?.top) + Number(getEducationRect()?.height)) > 10))
-    setIsExperience(!isAbout && !isEducation && ((Number(getExperinceRect()?.top) + Number(getExperinceRect()?.height)) > 10))
-    setIsProjects(!isAbout && !isEducation && !isExperience && ((Number(getProjectsRect()?.top) + Number(getProjectsRect()?.height)) > 10))
+  const updateNavState = () => {
+    setIsAbout(getAboutHeight() > 10)
+    setIsEducation(!isAbout && (getEducationHeight() > 10))
+    setIsExperience(!isAbout && !isEducation && (getExperienceHeight() > 10))
+    setIsProjects(!isAbout && !isEducation && !isExperience && (getProjectsHeight() > 10))
     document.getElementById("AboutNavBar")?.classList.toggle("w-16", isAbout)
+    document.getElementById("AboutNavBar")?.classList.toggle("w-8", !isAbout)
     document.getElementById("EducationNavBar")?.classList.toggle("w-16", isEducation)
+    document.getElementById("EducationNavBar")?.classList.toggle("w-8", !isEducation)
     document.getElementById("ExperienceNavBar")?.classList.toggle("w-16", isExperience)
+    document.getElementById("ExperienceNavBar")?.classList.toggle("w-8", !isExperience)
     document.getElementById("ProjectsNavBar")?.classList.toggle("w-16", isProjects)
-    console.log(isAbout)
-    console.log(isEducation)
-    console.log(isExperience)
-    console.log(isProjects)
+    document.getElementById("ProjectsNavBar")?.classList.toggle("w-8", !isProjects)
   }
-  useEffect(() => {setTimeout(handleScroll, 0)}, [])
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    const onStart = setTimeout(updateNavState, 0)
     return () => {
-        window.removeEventListener('scroll', handleScroll)
+      clearTimeout(onStart)
     }
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener('scroll', updateNavState)
+    return () => {
+        window.removeEventListener('scroll', updateNavState)
+    }  
   })
+
+  useEffect(() => {
+    window.addEventListener('scrollend', updateNavState)
+    return () => {
+        window.removeEventListener('scrollend', updateNavState)
+    }  
+  })
+
     return (
       <div className="mb-10 lg:min-h-screen lg:sticky lg:top-0 lg:flex lg:flex-col lg:justify-between lg:max-h-screen  lg:py-24 lg:mb-0">
         <div>
@@ -47,19 +66,19 @@ export default function LeftSection() {
           </a>
           <div className="hidden lg:text-sm lg:font-bold lg:uppercase lg:tracking-widest lg:flex lg:flex-col lg:my-10">
             <a className="group py-3" href="#About">
-              <span id="AboutNavBar" className="inline-block align-middle mr-4 h-0.5 w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
+              <span id="AboutNavBar" className="inline-block align-middle mr-4 h-0.5 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
               <span className="group-hover:text-hightlight group-focus-visible:bg-focus group-motion-reduce:transition-none">About</span>
             </a>
             <a className="group py-3" href="#Education">
-              <span id="EducationNavBar" className="inline-block align-middle mr-4 h-0.5 w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
+              <span id="EducationNavBar" className="inline-block align-middle mr-4 h-0.5 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
               <span className="group-hover:text-hightlight group-focus-visible:bg-focus group-motion-reduce:transition-none">Education</span>
             </a>
             <a className="group py-3" href="#Experience">
-              <span id="ExperienceNavBar" className="inline-block align-middle mr-4 h-0.5 w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
+              <span id="ExperienceNavBar" className="inline-block align-middle mr-4 h-0.5 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
               <span className="group-hover:text-hightlight group-focus-visible:bg-focus group-motion-reduce:transition-none">Experience</span>
             </a>
             <a className="group py-3" href="#Projects">
-              <span id="ProjectsNavBar" className="inline-block align-middle mr-4 h-0.5 w-8 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
+              <span id="ProjectsNavBar" className="inline-block align-middle mr-4 h-0.5 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
               <span className="group-hover:text-hightlight group-focus-visible:bg-focus group-motion-reduce:transition-none">Projects</span>
             </a>
           </div>
