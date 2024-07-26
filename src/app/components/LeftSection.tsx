@@ -43,14 +43,14 @@ export default function LeftSection() {
     return () => {
         window.removeEventListener('scroll', updateNavState)
     }  
-  })
+  }, [isAbout, isEducation, isExperience, isProjects])
 
   useEffect(() => {
     window.addEventListener('scrollend', updateNavState)
     return () => {
         window.removeEventListener('scrollend', updateNavState)
     }  
-  })
+  }, [isAbout, isEducation, isExperience, isProjects])
 
     return (
       <div className="mb-10 lg:min-h-screen lg:sticky lg:top-0 lg:flex lg:flex-col lg:justify-between lg:max-h-screen  lg:py-24 lg:mb-0">
@@ -64,7 +64,7 @@ export default function LeftSection() {
               <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
             </svg>
           </a>
-          <div className="hidden lg:text-sm lg:font-bold lg:uppercase lg:tracking-widest lg:flex lg:flex-col lg:my-10">
+          <div className="hidden w-2/5 lg:text-sm lg:font-bold lg:uppercase lg:tracking-widest lg:flex lg:flex-col lg:my-10">
             <a className="group py-3" href="#About">
               <span id="AboutNavBar" className="inline-block align-middle mr-4 h-0.5 bg-highlight transition-all group-hover:w-16 group-hover:bg-focus group-focus-visible:w-16 group-focus-visible:bg-focus group-motion-reduce:transition-none"></span>
               <span className="group-hover:text-hightlight group-focus-visible:bg-focus group-motion-reduce:transition-none">About</span>
