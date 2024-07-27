@@ -1,6 +1,6 @@
 export default function Education(props:any) {
     return (
-        <a className="py-2.5 grid grid-cols-3 group hover:text-hightlight"  href={props.item.website} target="_blank" rel="noopener noreferrer">
+        <a className="transition ease-in-out duration-300 hover:drop-shadow-xl hover:bg-gray-400 hover:rounded-md hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-opacity-10 pr-8 pl-3 py-2.5 grid grid-cols-3 group hover:text-hightlight"  href={props.item.website} target="_blank" rel="noopener noreferrer">
             <p className="font-medium transition-all motion-reduce:transition-none">{props.item.fromDate + " - " + props.item.toDate}</p>
             <div className="grid-cols-subgrid col-span-2 flex flex-col">
                 <div className="max-w-xs leading-normal font-medium flex flex-col">

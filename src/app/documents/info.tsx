@@ -20,7 +20,12 @@ const card:Card = {
     myBio: "Eager to keep learning and loves to code."
 }
 
-const about:string = "Enthusiastic Automation Engineer transitioning to Full Stack Engineering, with a proven track record in programming and integrating complex systems. Skilled in system testing, validation, and performance optimization. Committed to lifelong learning and passionate about coding. Adept at leveraging programming knowledge to solve complex problems and drive innovation. Excited to bring a self-reliant and continuously learning mindset to Full Stack development, utilizing expertise in various programming languages and tools to build robust and efficient applications."
+const about:string[] = [
+    "My journey into the tech world began during my college years, where I studied robotics and automation system engineering. I first learned C programming as my foundational programming language. Driven by my interest, I later learned Java and Python. I have programmed various microprocessors, controllers, single-board computers, and robot manipulators. I find coding in different programming languages enjoyable because it is logical, much like mathematics. However, I did not have ample time to fully explore it due to the demands of other departmental subjects.",
+    "During my final year of study, I had the opportunity to intern at Mitsubishi Electric Factory Automation (Thailand). Here, I worked on SCADA system design, encompassing both frontend (UI) and backend (transaction, SQL, AWS IoT, etc.) development. This experience felt similar to full-stack development.",
+    "After graduating, I secured a job in the field of automation, working on logistics and robotics at Somboon Siasun Tech. During my time there, I utilized my programming skills to aid in automated commissioning and testing workflows for the systems my team and I installed onsite for customers.",
+    "Nowadays, I have decided to transition into the tech world and aim to become a full-stack engineer. I want to work in a field I love and continue learning without interruption."
+]
 
 class Experience{
     title: string

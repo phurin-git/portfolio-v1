@@ -5,6 +5,7 @@ export default function Cursor(){
     const [posX, setPosX] = useState(0)
     const [posY, setPosY] = useState(0)
     const [scrollY, setScrollY] = useState(0)
+    const [mouseState, setMouseState] = useState(false)
 
     const setMousePos = () => {
         const cursor = document.getElementById("cursor")
@@ -15,13 +16,16 @@ export default function Cursor(){
     }
 
     const handleMouse = (e:any) => {
+        setMouseState(true)
         setPosX(e.clientX)
         setPosY(e.clientY)
         setMousePos()
+        setMouseState(false)
     }
 
     const handleScroll = () => {
         setScrollY(window.scrollY)
+        if(!mouseState)
         setMousePos()
     }
 
@@ -42,6 +46,6 @@ export default function Cursor(){
     }, [scrollY])
 
     return(
-        <div id="cursor" className="z-0 invisible absolute size-96 rounded-full bg-white mix-blend-overlay opacity-15 blur-3xl lg:visible" />
+        <div id="cursor" className="absolute z-0 size-96 rounded-full invisible mix-blend-overlay opacity-50 blur-3xl overflow-hidden lg:visible" />
     )
 }

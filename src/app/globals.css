@@ -3,5 +3,26 @@
 @tailwind utilities;
 
 :root {
+    background-color: #191825;
+    color: #E384FF;
     scroll-behavior: smooth;
+    overflow-x: none;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}
+
+a, a span, a svg {
+    filter: brightness(1.1);
+    font-weight: bold;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+a:hover {
+    color: #865DFF;
+}
+
+#cursor {
+    background-color: #FFA3FD;
 }
