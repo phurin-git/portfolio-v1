@@ -3,16 +3,15 @@
 @tailwind utilities;
 
 :root {
-    background-color: #191825;
-    color: #E384FF;
+    background-color: theme('colors.background');
+    color: theme('colors.text');
     scroll-behavior: smooth;
-    overflow-x: none;
+    overflow-x: hidden;
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
 }
 
 a, a span, a svg {
-    filter: brightness(1.1);
     font-weight: bold;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -20,9 +19,9 @@ a, a span, a svg {
 }
 
 a:hover {
-    color: #865DFF;
+    color: theme('colors.hypertext');
 }
 
 #cursor {
-    background-color: #FFA3FD;
+    background-color: theme('colors.cursor');
 }

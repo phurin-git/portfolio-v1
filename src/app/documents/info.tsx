@@ -30,17 +30,15 @@ const about:string[] = [
 class Experience{
     title: string
     companyName: string
-    fromDate: string
-    toDate: string
+    date: string
     location: string
     website: string
     responsibility: string[]
     sumResponsibility: string
-    constructor(title: string, companyName: string, fromDate: string, toDate: string, location: string, website: string, responsibility: string[], sumResponsibility: string){
+    constructor(title: string, companyName: string, date: string, location: string, website: string, responsibility: string[], sumResponsibility: string){
         this.title = title
         this.companyName = companyName
-        this.fromDate = fromDate
-        this.toDate = toDate
+        this.date = date
         this.location = location
         this.website = website
         this.responsibility = responsibility
@@ -51,8 +49,7 @@ class Experience{
 const MELFT:Experience = new Experience(
     "Internship",
     "MELFT",
-    "08/2022",
-    "11/2022",
+    "AUG — NOV 2022",
     "Phra Khanong, Bangkok, Thailand",
     "https://www.mitsubishifa.co.th",
     [
@@ -66,8 +63,7 @@ const MELFT:Experience = new Experience(
 const SST:Experience = new Experience(
     "Automation Engineer",
     "SST",
-    "06/2023",
-    "07/2024",
+    "JUN 2023 — JUL 2024",
     "Bang Chalong, Samut Prakan, Thailand",
     "https://www.somboonsiasuntech.co.th",
     [
@@ -90,17 +86,15 @@ class Education{
     GPA: string
     location: string
     website:string
-    fromDate: string
-    toDate: string
+    date: string
     extraDetail: string[]
-    constructor(degree: string, university: string, GPA: string, location: string, website:string, fromDate: string, toDate: string, extraDetail: string[]){
+    constructor(degree: string, university: string, GPA: string, location: string, website:string, date: string, extraDetail: string[]){
         this.degree = degree
         this.university = university
         this.GPA = GPA
         this.location = location
         this.website = website
-        this.fromDate = fromDate
-        this.toDate = toDate
+        this.date = date
         this.extraDetail = extraDetail
     }
 }
@@ -111,8 +105,7 @@ const KU:Education = new Education(
     "3.65",
     "Sriracha, Chonburi, Thailand",
     "/transcript.pdf",
-    "07/2019",
-    "04/2023",
+    "JUL — MAR 2023",
     [
         "First Class Honors"
     ]
@@ -122,15 +115,13 @@ const education:Education[] = [KU]
 
 class Project{
     projectName: string
-    fromDate: string
-    toDate: string
+    date: string
     previewImage: string
     workSummary: string
     link: string
-    constructor(projectName: string, fromDate: string, toDate: string, previewImage: string, workSummary: string, link: string){
+    constructor(projectName: string, date: string, previewImage: string, workSummary: string, link: string){
         this.projectName = projectName
-        this.fromDate = fromDate
-        this.toDate = toDate
+        this.date = date
         this.previewImage = previewImage
         this.workSummary = workSummary
         this.link = link
@@ -141,40 +132,35 @@ class Project{
 const projects:Project[] = [
     new Project(
         "Object Inspection by using Python OpenCV",
-        "12/2021",
-        "12/2021",
+        "DEC 2021",
         "/images/oipo/image.png",
         "This project focused on developing algorithms to detect and analyze the shapes and dimensions of objects, measured in millimeters, within video streams. Its goal was to enable accurate real-time inspection processes, specifically for applications in quality control, thereby enhancing operational efficiency and precision.",
         "https://github.com/phurin-git/object-inspection-opencv-python"
     ),
     new Project(
         "3DoF Robot Kinematics and Dynamics Design",
-        "04/2022",
-        "05/2022",
+        "MAR — APR 2022",
         "/images/rkdd/image.png",
         "Designed with a focus on pick-and-place tasks and considering defined load and workspace parameters, this system utilizes Python SymPy to calculate Forward and Inverse Kinematics, Jacobian matrices, and Dynamic Equations using the Euler-Lagrange approach. The selection of actuators and transmission systems is optimized for enhancing robot performance and efficiency in task execution.",
         "https://github.com/phurin-git/3dof-robot-kinematics-dynamics"
     ),
     new Project(
         "SCADA for Decarbonization (Prototype)",
-        "10/2022",
-        "11/2022",
+        "OCT — NOV 2022",
         "/images/scada/image.png",
         "Developed a SCADA system for industrial clients to comply with TGO policies related to international emissions trading schemes, aimed at reducing greenhouse gas emissions. The system is designed to monitor real-time energy resource consumption and calculate carbon credit profits based on historical consumption data.",
         "https://www.mitsubishifa.co.th/en/solutions/efactory-alliance/a-system-for-tracking-energy-use-and-carbon-emissions-in-industrial-plants"
     ),
     new Project(
         "Robot control by using Motion Capture and MQTT Protocol",
-        "01/2023",
-        "05/2023",
+        "JAN — MAY 2023",
         "/images/rmcm/image.png",
         "Developed wireless control of robot manipulator using human motion, aiming to seamlessly integrate motion capture, robot control, and real-time visualization.",
         "https://github.com/phurin-git/python-ahrs-mpu9250"
     ),
     new Project(
         "Automated Storage and Retrieval System",
-        "08/2023",
-        "05/2024",
+        "AUG 2023 — MAY 2024",
         "/images/asrs/image.jpg",
         "Installation and commissioning ASRS for storage tires 2 factories. This project involves adding new ASRS units to the existing system.",
         "https://www.somboonsiasuntech.co.th/en/our-business/intelligent-logistic"

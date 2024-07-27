@@ -1,7 +1,7 @@
 export default function Education(props:any) {
     return (
         <a className="transition ease-in-out duration-300 hover:drop-shadow-xl hover:bg-gray-400 hover:rounded-md hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-opacity-10 pr-8 pl-3 py-2.5 grid grid-cols-3 group hover:text-hightlight"  href={props.item.website} target="_blank" rel="noopener noreferrer">
-            <p className="font-medium transition-all motion-reduce:transition-none">{props.item.fromDate + " - " + props.item.toDate}</p>
+            <p className="font-semibold text-xs pt-1 pl-4 transition-all motion-reduce:transition-none group-hover:text-text">{props.item.date}</p>
             <div className="grid-cols-subgrid col-span-2 flex flex-col">
                 <div className="max-w-xs leading-normal font-medium flex flex-col">
                     <span className="transition-all motion-reduce:transition-none">{props.item.degree}</span>
@@ -14,7 +14,7 @@ export default function Education(props:any) {
                 </div>
                 {false && <div className="max-w-xs leading-normal transition-all motion-reduce:transition-none">{props.item.location}</div>}
                 <div>
-                    {props.item.GPA && <span className="mr-1 transition-all motion-reduce:transition-none">GPA{" "+ props.item.GPA + "/4.0 " + (props.item.extraDetail && (" · " +props.item.extraDetail))}</span>}
+                    {props.item.GPA && <span className="mr-1 font-normal transition-all motion-reduce:transition-none group-hover:text-text">GPA{" "+ props.item.GPA + "/4.0 " + (props.item.extraDetail && (" · " +props.item.extraDetail))}</span>}
                 </div>
             </div>
         </a>

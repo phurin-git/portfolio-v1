@@ -27,7 +27,7 @@ export default function RightSection() {
     return (
         <div className='z-10'>
             <p className={navClass}>About</p>
-            <p id="about" className=" font-normal lg:pt-24">
+            <p id="about" className="font-normal leading-normal lg:pt-24">
                 My journey into the tech world began during my college years, where I studied robotics and automation system engineering. I first learned C programming as my foundational programming language. Driven by my interest, I later learned Java and Python. I have programmed various microprocessors, controllers, single-board computers, and robot manipulators. I find coding in different programming languages enjoyable because it is logical, much like mathematics. However, I did not have ample time to fully explore it due to the demands of other departmental subjects.
                 <span className="mb-4 block"></span>
                 During my final year of study, I had the opportunity to intern at <a className="font-bold" href={experience[experience.length-1].website}>Mitsubishi Electric Factory Automation Thailand (MELFT)</a>. Here, I worked on SCADA system design, encompassing both frontend (UI) and backend (transaction, SQL, AWS IoT, etc.) development. This experience felt similar to full-stack development.

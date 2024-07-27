@@ -18,18 +18,38 @@ export default function LeftSection() {
   const getProjectsHeight = () => Number(getProjectsRect()?.top) + Number(getProjectsRect()?.height)
   
   const updateNavState = () => {
+    const aboutnavbar = document.getElementById("aboutnavbar")
+    const educationnavbar = document.getElementById("educationnavbar")
+    const experiencenavbar = document.getElementById("experiencenavbar")
+    const projectsnavbar = document.getElementById("projectsnavbar")
+    const aboutnavtext = document.getElementById("aboutnavtext")
+    const educationnavtext = document.getElementById("educationnavtext")
+    const experiencenavtext = document.getElementById("experiencenavtext")
+    const projectsnavtext = document.getElementById("projectsnavtext")
     setIsAbout(getAboutHeight() > 10)
     setIsEducation(!isAbout && (getEducationHeight() > 10))
     setIsExperience(!isAbout && !isEducation && (getExperienceHeight() > 10))
     setIsProjects(!isAbout && !isEducation && !isExperience && (getProjectsHeight() > 10))
-    document.getElementById("AboutNavBar")?.classList.toggle("w-16", isAbout)
-    document.getElementById("AboutNavBar")?.classList.toggle("w-8", !isAbout)
-    document.getElementById("EducationNavBar")?.classList.toggle("w-16", isEducation)
-    document.getElementById("EducationNavBar")?.classList.toggle("w-8", !isEducation)
-    document.getElementById("ExperienceNavBar")?.classList.toggle("w-16", isExperience)
-    document.getElementById("ExperienceNavBar")?.classList.toggle("w-8", !isExperience)
-    document.getElementById("ProjectsNavBar")?.classList.toggle("w-16", isProjects)
-    document.getElementById("ProjectsNavBar")?.classList.toggle("w-8", !isProjects)
+    aboutnavbar?.classList.toggle("w-16", isAbout)
+    aboutnavbar?.classList.toggle("bg-hypertext", isAbout)
+    aboutnavtext?.classList.toggle("text-hypertext", isAbout)
+    aboutnavbar?.classList.toggle("w-8", !isAbout)
+    aboutnavbar?.classList.toggle("bg-text", !isAbout)
+    educationnavbar?.classList.toggle("w-16", isEducation)
+    educationnavbar?.classList.toggle("bg-hypertext", isEducation)
+    educationnavtext?.classList.toggle("text-hypertext", isEducation)
+    educationnavbar?.classList.toggle("w-8", !isEducation)
+    educationnavbar?.classList.toggle("bg-text", !isEducation)
+    experiencenavbar?.classList.toggle("w-16", isExperience)
+    experiencenavbar?.classList.toggle("bg-hypertext", isExperience)
+    experiencenavtext?.classList.toggle("text-hypertext", isExperience)
+    experiencenavbar?.classList.toggle("w-8", !isExperience)
+    experiencenavbar?.classList.toggle("bg-text", !isExperience)
+    projectsnavbar?.classList.toggle("w-16", isProjects)
+    projectsnavbar?.classList.toggle("bg-hypertext", isProjects)
+    projectsnavtext?.classList.toggle("text-hypertext", isProjects)
+    projectsnavbar?.classList.toggle("w-8", !isProjects)
+    projectsnavbar?.classList.toggle("bg-text", !isProjects)
   }
   useEffect(() => {
     const onStart = setTimeout(updateNavState, 0)
@@ -58,7 +78,7 @@ export default function LeftSection() {
           <h1 className="text-4xl font-bold tracking-tight brightness-110 sm:text-5xl">{card.myName}</h1>
           <h2 className="mt-3 text-lg font-medium tracking-tight brightness-110 sm:text-xl">{card.jobTitle}</h2>
           <p className="mt-4 max-w-xs leading-normal">{card.myBio}</p>
-          <a className="group mt-4 max-w-xs leading-normal font-medium flex items-center hover:text-hightlight" href="/resume.pdf">
+          <a className="group mt-4 max-w-xs leading-normal font-medium flex items-center" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             <span className="font-bold mr-1">View Full Resume</span>
             <svg className="size-4 group-hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
               <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
@@ -66,20 +86,20 @@ export default function LeftSection() {
           </a>
           <div className="hidden w-2/5 lg:text-sm lg:font-bold lg:uppercase lg:tracking-widest lg:flex lg:flex-col lg:my-10">
             <a className="group py-3" href="#about">
-              <span id="AboutNavBar" className="inline-block align-middle mr-4 h-0.5 bg-text transition-all group-hover:w-16 group-hover:bg-text group-focus-visible:w-16 group-focus-visible:bg-text group-motion-reduce:transition-none"></span>
-              <span className="text-xs group-hover:text-hightlight group-focus-visible:bg-text group-motion-reduce:transition-none">About</span>
+              <span id="aboutnavbar" className="inline-block align-middle mr-4 h-0.5 transition-all group-hover:w-16 group-hover:bg-hypertext group-focus-visible:w-16 group-focus-visible:bg-text group-motion-reduce:transition-none"></span>
+              <span id="aboutnavtext" className="text-xs group-hover:text-hypertext group-focus-visible:bg-text group-motion-reduce:transition-none">About</span>
             </a>
             <a className="group py-3" href="#education">
-              <span id="EducationNavBar" className="inline-block align-middle mr-4 h-0.5 bg-text transition-all group-hover:w-16 group-hover:bg-text group-focus-visible:w-16 group-focus-visible:bg-text group-motion-reduce:transition-none"></span>
-              <span className="text-xs group-hover:text-hightlight group-focus-visible:bg-text group-motion-reduce:transition-none">Education</span>
+              <span id="educationnavbar" className="inline-block align-middle mr-4 h-0.5  transition-all group-hover:w-16 group-hover:bg-hypertext group-focus-visible:w-16 group-focus-visible:bg-text group-motion-reduce:transition-none"></span>
+              <span id="educationnavtext" className="text-xs group-hover:text-hypertext group-focus-visible:bg-text group-motion-reduce:transition-none">Education</span>
             </a>
             <a className="group py-3" href="#experience">
-              <span id="ExperienceNavBar" className="inline-block align-middle mr-4 h-0.5 bg-text transition-all group-hover:w-16 group-hover:bg-text group-focus-visible:w-16 group-focus-visible:bg-text group-motion-reduce:transition-none"></span>
-              <span className="text-xs group-hover:text-hightlight group-focus-visible:bg-text group-motion-reduce:transition-none">Experience</span>
+              <span id="experiencenavbar" className="inline-block align-middle mr-4 h-0.5 transition-all group-hover:w-16 group-hover:bg-hypertext group-focus-visible:w-16 group-focus-visible:bg-text group-motion-reduce:transition-none"></span>
+              <span id="experiencenavtext" className="text-xs group-hover:text-hypertext group-focus-visible:bg-text group-motion-reduce:transition-none">Experience</span>
             </a>
             <a className="group py-3" href="#projects">
-              <span id="ProjectsNavBar" className="inline-block align-middle mr-4 h-0.5 bg-text transition-all group-hover:w-16 group-hover:bg-text group-focus-visible:w-16 group-focus-visible:bg-text group-motion-reduce:transition-none"></span>
-              <span className="text-xs group-hover:text-hightlight group-focus-visible:bg-text group-motion-reduce:transition-none">Projects</span>
+              <span id="projectsnavbar" className="inline-block align-middle mr-4 h-0.5 transition-all group-hover:w-16 group-hover:bg-hypertext group-focus-visible:w-16 group-focus-visible:bg-text group-motion-reduce:transition-none"></span>
+              <span id="projectsnavtext" className="text-xs group-hover:text-hypertext group-focus-visible:bg-text group-motion-reduce:transition-none">Projects</span>
             </a>
           </div>
         </div>
