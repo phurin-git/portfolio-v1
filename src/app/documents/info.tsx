@@ -104,7 +104,7 @@ const KU:Education = new Education(
     "Kasetsart University",
     "3.65",
     "Sriracha, Chonburi, Thailand",
-    "/transcript.pdf",
+    "https://www.ku.ac.th/",
     "JUL — MAR 2023",
     [
         "First Class Honors"
